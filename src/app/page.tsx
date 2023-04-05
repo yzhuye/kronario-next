@@ -4,8 +4,6 @@ import Menu from "@/components/molecules/menu";
 import ColoredProgressBar from "@/components/atoms/progress_bar";
 import BadgeList from "@/components/molecules/badge_list";
 import ItemList from "@/components/organisms/item_list";
-
-
 import ArrowNav from "@/components/molecules/arrow_nav";
 
 const Page = () => {
