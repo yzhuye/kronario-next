@@ -2,8 +2,8 @@ import React from "react";
 import Item from "@/components/molecules/item";
 
 interface ItemProps {
-    title: string;
-    subTitle: string;
+    name: string;
+    category: string;
 }
 
 interface ItemListProps {
@@ -19,7 +19,7 @@ const ItemList: React.FC<ItemListProps> = ({ items, type }) => {
   return (
     <ul className={`grid ${className} gap-4 p-2 bg-white`}>
         {items.map((item, index) => (
-            <Item key={index} title={item.title} subTitle={item.subTitle} />
+            <Item key={index} name={item.name} category={item.category} />
         ))}
     </ul>
   );

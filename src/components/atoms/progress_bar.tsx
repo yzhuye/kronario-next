@@ -2,11 +2,11 @@
 
 import React from "react";
 
-interface ColoredProgressBarProps {
+interface ProgressBarProps {
   progress: number;
 }
 
-const ColoredProgressBar: React.FC<ColoredProgressBarProps> = ({ progress }) => {
+const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
   return (
     <div className="flex">
       <div
@@ -28,4 +28,4 @@ const ColoredProgressBar: React.FC<ColoredProgressBarProps> = ({ progress }) => 
   );
 };
 
-export default ColoredProgressBar;
+export default ProgressBar;

@@ -1,11 +1,110 @@
 {
-  "splash_screen":{
-  "logoSrc": "/kronario_full.svg",
-  "logoAlt": "logo_full",
-  "avatarSrc": "/avatar.svg",
-  "avatarAlt": "Kronario avatar",
-  "title": "Organiza tu horario con Kronario",
-  "subtitle": "Kronario te ayuda a organizar tu horario de manera rápida y efectiva."
-}
+  "splash_screen": {
+    "logoSrc": "/kronario_full.svg",
+    "logoAlt": "logo_full",
+    "avatarSrc": "/avatar.svg",
+    "avatarAlt": "Kronario avatar",
+    "title": "Organiza tu horario con Kronario",
+    "subtitle": "Kronario te ayuda a organizar tu horario de manera rápida y efectiva."
+  },
+  "pagina_carreras": {
+    "menu": {
+      "type": "search",
+      "text": "Buscar carrera..."
+    },
+    "progress_bar": {
+      "progress": 1
+    },
+    "arrow_nav": {
+      "text": "Selecciona tu/s carrera/s",
+      "block": "left",
+      "leftUrl": "none",
+      "rightUrl": "/subjects"
+    },
+    "badge_list":{
+      "badges": ["Pregrados", "Postgrados", "Cursos Extras"],
+      "color": "blue"
+    },
+    "item_list": [
+      { "name": "Ingenieria en sistemas y computacion", "category": "Pregrado" },
+      { "name": "Ingenieria civil", "category": "Pregrado" },
+      { "name": "Diseño grafico", "category": "Pregrado" },
+      { "name": "Derecho", "category": "Pregrado" },
+      { "name": "Medicina", "category": "Pregrado" },
+      { "name": "Psicologia", "category": "Pregrado" },
+      { "name": "Felinorte", "category": "Curso Extra"},
+      { "name": "Danza Arabe", "category": "Curso Extra"}
+    ]
+  },    
+  "pagina_asignaturas": {
+    "menu": {
+      "type": "search",
+      "text": "Buscar asignatura..."
+    },
+    "progress_bar": {
+      "progress": 2
+    },
+    "arrow_nav": {
+      "text": "Selecciona tus asignaturas",
+      "block": "none",
+      "leftUrl": "/",
+      "rightUrl": "/restrictions"
+    },
+    "badge_list": {
+      "badges": ["Ingenieria en sistemas y computacion", "Ingenieria civil"],
+      "color": "green"
+    },
+    "item_list": [
+      { "name": "Calculo 1", "category": "Ingenieria en sistemas y computacion / Ingenieria civil" },
+      { "name": "Calculo 2", "category":"Ingenieria en sistemas y computacion / Ingenieria civil" },
+      { "name": "Ciencia de los Materiales", "category": "Ingenieria civil" },
+      { "name": "Programacion orientada a objetos", "category":"Ingenieria en sistemas y computacion" },
+      { "name": "Algoritmia y programacion 2", "category":"Ingenieria en sistemas y computacion" }
+    ]
+  },
+  "pagina_restricciones": {
+    "menu": {
+      "type": "none",
+      "text": "none"  
+    },
+    "progress_bar": {
+      "progress": 3
+    },
+    "arrow_nav": {
+      "text": "Ajusta tu horario",
+      "block": "none",
+      "leftUrl": "/subjects",
+      "rightUrl": "/schedules"
+    },
+    "primera_seccion": {
+      "title": "Bloquea tus Profesores",
+      "subjects_badge": {
+        "badges": ["Calculo 1", "Algoritmia y programacion 2", "Programacion orientada a objetos"],
+        "color": "yellow"
+      },
+      "profesor_list": [
+        { "name": "Juan Perez", "category": "Calculo 1" },
+        { "name": "Maria Lopez", "category":"Calculo 1" },
+        { "name": "Rocio Ramos Rodriguez", "category": "Algoritmia y programacion 2" },
+        { "name": "Jose Martinez", "category":"Programacion orientada a objetos" },
+        { "name": "Maria Rodriguez", "category":"Programacion orientada a objetos" }
+      ]
+    }
+  },
+  "pagina_horarios": {
+    "menu": {
+      "type": "button",
+      "text": "Guardar"
+    },
+    "progress_bar": {
+      "progress": 3
+    },
+    "arrow_nav": {
+      "text": "Elige tu horario",
+      "block": "right",
+      "leftUrl": "/restrictions",
+      "rightUrl": "none"
+    }
+  }
 }
   

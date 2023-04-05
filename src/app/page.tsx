@@ -1,14 +1,18 @@
 "use client";
 
 import Menu from "@/components/molecules/menu";
-import ColoredProgressBar from "@/components/atoms/progress_bar";
+import ProgressBar from "@/components/atoms/progress_bar";
 import BadgeList from "@/components/molecules/badge_list";
 import ItemList from "@/components/organisms/item_list";
 import ArrowNav from "@/components/molecules/arrow_nav";
 import SplashScreen from "@/components/molecules/splash_screen";
 import { useEffect, useState } from "react";
 
+import { pagina_carreras as data} from '@/assets/data.json';
+
 const Page = () => {
+  let { menu, arrow_nav, progress_bar, badge_list, item_list } = data;
+
   const [splashState, setSplashState] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -23,21 +27,12 @@ const Page = () => {
   if(!splashState){
   return (
     <div className="flex flex-col h-screen ">
-      <div >
-      <Menu type="search"  text="Busca tu/s carrera/s..." />
-      <ColoredProgressBar progress={1} />
-      <ArrowNav direction="left" rightUrl="/subjects" centerText="Selecciona tu/s carrera/s" />    
-      <BadgeList color="blue" badges={["Pregrado", "Postgrado", "Cursos Extras"]} />
-      </div>
+      <Menu type={menu.type} text={menu.text} /> 
+      <ProgressBar progress={progress_bar.progress} />
+      <ArrowNav block={arrow_nav.block} rightUrl={arrow_nav.rightUrl} text={arrow_nav.text} />
+      <BadgeList color={badge_list.color} badges={badge_list.badges} />
       <div className="flex-1 overflow-y-auto">
-      <ItemList items={[{title: "Carrera 1", subTitle: "Pregrado"}, {title: "Carrera 2", subTitle: "Pregrado"}, 
-      {title: "Carrera 3", subTitle: "Postgrado"}, {title: "Carrera 4", subTitle: "Postgrado"},
-      {title: "Carrera 5", subTitle: "Cursos Extras"}, {title: "Carrera 6", subTitle: "Cursos Extras"},
-      {title: "Carrera 7", subTitle: "Cursos Extras"}, {title: "Carrera 8", subTitle: "Cursos Extras"},
-      {title: "Carrera 9", subTitle: "Cursos Extras"}, {title: "Carrera 10", subTitle: "Cursos Extras"},
-      {title: "Carrera 7", subTitle: "Cursos Extras"}, {title: "Carrera 8", subTitle: "Cursos Extras"},
-      {title: "Carrera 9", subTitle: "Cursos Extras"}, {title: "Carrera 10", subTitle: "Cursos Extras"},
-    ]} />
+        <ItemList items={item_list} />
       </div>
     </div>
   );
@@ -45,3 +40,4 @@ const Page = () => {
 };
 
 export default Page;
+

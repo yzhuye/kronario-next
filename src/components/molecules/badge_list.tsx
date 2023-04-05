@@ -3,7 +3,7 @@ import Badge from "@/components/atoms/badge";
 
 interface BadgeListProps {
   badges: string[]; // Lista de badges
-  color: "green"|"blue"; // Color de los badges
+  color: string; // Color de los badges
 }
 
 const BadgeList: React.FC<BadgeListProps> = ({ badges, color }) => {
