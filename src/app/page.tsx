@@ -20,7 +20,6 @@ const Home = () => {
   return (
 
     <>{splashState ? <SplashScreen /> : <>
-    <Menu type="search"  text="Busca tu/s carrera/s..."  />
     <Menu type="search"  text="Busca tu/s carrera/s..."  /><ColoredProgressBar progress={1} />
     <ArrowNav direction="left" rightUrl="/subjects" centerText="Selecciona tu/s carrera/s" /></> }
     </>
