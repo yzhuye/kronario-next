@@ -1,3 +1,5 @@
+"use client";
+
 import Menu from "@/components/molecules/menu";
 import ColoredProgressBar from "@/components/atoms/progress_bar";
 import ArrowNav from "@/components/molecules/arrow_nav";
