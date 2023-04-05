@@ -1,4 +1,3 @@
-"use client";
 import './globals.css'
 import SplashScreen from "@/components/molecules/splash_screen";
 import { useState, useEffect } from "react";
@@ -31,3 +30,4 @@ export default function RootLayout({
     </html>
   )
 }
+
