@@ -48,26 +48,31 @@ This project was created using the following technologies:
     ```bash
     git clone https://github.com/<your-github-username>/kronario-next.git
     ```
+    
+3. Navigate to the project directory:
+   ```bash
+   cd kronario-next
+   ```
 
-2. Add the original repository as a remote upstream (This will allow you to keep your fork up-to-date):
+4. Add the original repository as a remote upstream (This will allow you to keep your fork up-to-date):
     ```bash
     git remote add upstream https://github.com/jorgeluissanchez/kronario-next.git
     ```
 
-3. Make changes to the code and commit them to your local branch:
+4. Make changes to the code and commit them to your local branch:
     ```bash
     git add .
     git commit -m "Your commit message"
     ```
 
-4. Push your changes to your fork:
+5. Push your changes to your fork:
     ```bash
     git push origin <your-branch-name>
     ```
 
-5. Submit a pull request on the GitHub page of the original repository.
+6. Submit a pull request on the GitHub page of the original repository.
 
-6. You can fetch changes from the upstream remote and merge them into your local branch:
+7. You can fetch changes from the upstream remote and merge them into your local branch:
     ```bash
     git fetch upstream
     git merge upstream/main
