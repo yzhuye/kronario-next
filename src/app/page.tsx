@@ -5,9 +5,22 @@ import ColoredProgressBar from "@/components/atoms/progress_bar";
 import BadgeList from "@/components/molecules/badge_list";
 import ItemList from "@/components/organisms/item_list";
 import ArrowNav from "@/components/molecules/arrow_nav";
+import SplashScreen from "@/components/molecules/splash_screen";
+import { useEffect, useState } from "react";
 
 const Page = () => {
+  const [splashState, setSplashState] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setSplashState(false);
+    }, 2000);
+  }, []);
 
+  if (splashState) {
+    return <SplashScreen />;
+  }
+
+  if(!splashState){
   return (
     <div className="flex flex-col h-screen ">
       <div >
@@ -28,6 +41,7 @@ const Page = () => {
       </div>
     </div>
   );
+  }
 };
 
 export default Page;
