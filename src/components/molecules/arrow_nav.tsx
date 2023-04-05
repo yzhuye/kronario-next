@@ -15,7 +15,7 @@ const ArrowNav: React.FC<ArrowNavProps> = ({ direction = 'none', leftUrl = "", r
   const rightArrowVisibility = direction === 'right' ? 'hidden' : 'visible';
 
   return (
-    <div className="flex items-center justify-center my-3">
+    <div className="flex items-center justify-center my-3 bg-white">
       <Link href={leftUrl} className="flex mx-3 mt-1" style={{ visibility: leftArrowVisibility }}>
           <img src="/arrowLeft.svg" alt="arrow left" className="h-6 w-6" />
       </Link>

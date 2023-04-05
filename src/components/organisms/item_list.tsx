@@ -12,7 +12,7 @@ interface ItemListProps {
 
 const BadgeList: React.FC<ItemListProps> = ({ items }) => {
   return (
-    <ul className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4 p-2">
+    <ul className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4 p-2 bg-white">
         {items.map((item, index) => (
             <Item key={index} title={item.title} subTitle={item.subTitle} />
         ))}
