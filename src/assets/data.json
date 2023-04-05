@@ -1,0 +1,11 @@
+{
+  "splash_screen":{
+  "logoSrc": "/kronario_full.svg",
+  "logoAlt": "logo_full",
+  "avatarSrc": "/avatar.svg",
+  "avatarAlt": "Kronario avatar",
+  "title": "Organiza tu horario con Kronario",
+  "subtitle": "Kronario te ayuda a organizar tu horario de manera rápida y efectiva."
+}
+}
+  
