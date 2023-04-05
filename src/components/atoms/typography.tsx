@@ -5,7 +5,7 @@ import React from 'react';
 type TypographyProps = {
   children: React.ReactNode;
   color: 'blue' | 'gray';
-  type: 'h1' | 'h2' | 'p' | 'subtext';
+  type: 'h1' | 'h2' | 'p' | 'subtext' | 'text';
 };
 
 const Typography = ({ children, color, type }: TypographyProps) => {
@@ -35,6 +35,10 @@ const Typography = ({ children, color, type }: TypographyProps) => {
           <p className={`text-lg font-light text-center ${getColorClass()}`}>
             {children}
           </p>
+        );
+      case 'text':
+        return (
+          <p className={`text-md font-semibold ${getColorClass()}`}>{children}</p>
         );
       case 'subtext':
         return (

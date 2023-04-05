@@ -23,6 +23,7 @@ export default function Menu({ type = "none", buttonLink, text }: MenuProps) {
               type="search"
               name="search"
               placeholder={text || 'Buscar'}
+              style={{maxWidth: '240px'}}
             />
             <button type="submit" className="bg-gray-100 p-2">
               <Image
