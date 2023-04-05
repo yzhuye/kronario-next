@@ -34,7 +34,7 @@ export default function Menu({ type = "none", buttonLink, text }: MenuProps) {
             </button>
           </div>
         ) : type === 'button' ? (
-          <button className="bg-gray-100 p-2">
+          <button className="bg-gray-100 px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
             <a href={buttonLink || '#'}>{text || 'Botón'}</a>
           </button>
         ) : null}
