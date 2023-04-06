@@ -1,11 +1,111 @@
 {
-  "splash_screen":{
-  "logoSrc": "/kronario_full.svg",
-  "logoAlt": "logo_full",
-  "avatarSrc": "/avatar.svg",
-  "avatarAlt": "Kronario avatar",
-  "title": "Organiza tu horario con Kronario",
-  "subtitle": "Kronario te ayuda a organizar tu horario de manera rápida y efectiva."
-}
+  "splash_screen": {
+    "logoSrc": "/kronario_full.svg",
+    "logoAlt": "logo_full",
+    "avatarSrc": "/avatar.svg",
+    "avatarAlt": "Kronario avatar",
+    "title": "Organiza tu horario con Kronario",
+    "subtitle": "Kronario te ayuda a organizar tu horario de manera rápida y efectiva."
+  },
+  "pagina_carreras": {
+    "menu": {
+      "type": "search",
+      "text": "Buscar carrera..."
+    },
+    "progress_bar": {
+      "progress": 1
+    },
+    "arrow_nav": {
+      "text": "Selecciona tu/s carrera/s",
+      "block": "left",
+      "leftUrl": "none",
+      "rightUrl": "/subjects"
+    },
+    "badge_list":{
+      "badges": ["Pregrados", "Postgrados"],
+      "color": "blue"
+    },
+    "categories": [
+      { "name": "Pregrados", "id": "qwe-qw" },
+      { "name": "Postgrados", "id": "qwe-qe" }
+    ],
+    "item_list": [
+      { "name": "Ingenieria en sistemas y computacion", "category": "Pregrado", "id": "qwe-qwe" },
+      { "name": "Ingenieria civil", "category": "Pregrado", "id": "qwe-qw2" },
+      { "name": "Diseño grafico", "category": "Pregrado" , "id": "qwe-qw1" },
+      { "name": "Derecho", "category": "Pregrado", "id": "qwe-qw3" },
+      { "name": "Medicina", "category": "Pregrado", "id": "qwe-qw4" },
+      { "name": "Psicologia", "category": "Pregrado", "id": "qwe-qw5" }
+    ]
+  },    
+  "pagina_asignaturas": {
+    "menu": {
+      "type": "search",
+      "text": "Buscar asignatura..."
+    },
+    "progress_bar": {
+      "progress": 2
+    },
+    "arrow_nav": {
+      "text": "Selecciona tus asignaturas",
+      "block": "none",
+      "leftUrl": "/",
+      "rightUrl": "/restrictions"
+    },
+    "badge_list": {
+      "color": "green"
+    },
+    "item_list": [
+      { "name": "Calculo 1", "category": ["Ingenieria en sistemas y computacion","Ingenieria civil"], "id": "qwe-qww" },
+      { "name": "Calculo 2", "category":["Ingenieria en sistemas y computacion","Ingenieria civil"], "id": "qwe-qwr" },
+      { "name": "Ciencia de los Materiales", "category": ["Ingenieria civil"], "id": "qwe-qwt" },
+      { "name": "Programacion orientada a objetos", "category":["Ingenieria en sistemas y computacion"], "id": "qwe-qwy" },
+      { "name": "Algoritmia y programacion 2", "category":["Ingenieria en sistemas y computacion"], "id": "qwe-qwu" }
+    ]
+  },
+  "pagina_restricciones": {
+    "menu": {
+      "type": "none",
+      "text": "none"  
+    },
+    "progress_bar": {
+      "progress": 3
+    },
+    "arrow_nav": {
+      "text": "Ajusta tu horario",
+      "block": "none",
+      "leftUrl": "/subjects",
+      "rightUrl": "/schedules"
+    },
+    "primera_seccion": {
+      "title": "Bloquea tus Profesores:",
+      "subjects_badge": {
+        "badges": ["Calculo 1", "Algoritmia y programacion 2", "Programacion orientada a objetos"],
+        "color": "yellow"
+      },
+      "profesor_list": [
+        { "name": "Juan Perez", "category": "Calculo 1", "id": "qwe-qwc" },
+        { "name": "Maria Lopez", "category":"Calculo 1", "id": "qwe-qwv" },
+        { "name": "Rocio Ramos Rodriguez", "category": "Algoritmia y programacion 2", "id": "qwe-qwb" },
+        { "name": "Jose Martinez", "category":"Programacion orientada a objetos", "id": "qwe-qwn" },
+        { "name": "Maria Rodriguez", "category":"Programacion orientada a objetos", "id": "qwe-qwm" }
+      ]
+    }
+  },
+  "pagina_horarios": {
+    "menu": {
+      "type": "button",
+      "text": "Guardar"
+    },
+    "progress_bar": {
+      "progress": 3
+    },
+    "arrow_nav": {
+      "text": "Elige tu horario",
+      "block": "right",
+      "leftUrl": "/restrictions",
+      "rightUrl": "none"
+    }
+  }
 }
   

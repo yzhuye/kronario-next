@@ -23,8 +23,9 @@ const Home = () => {
       <Table headers={data.headers} rows={data.rows} />
       <button onClick={handleClick}>Contador: {contador}</button>
       <div>Valor inicial del contador: {contador}</div>
+
     </>
   );
 };
 
-export default Home;
+export default Page;

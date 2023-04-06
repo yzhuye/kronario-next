@@ -4,12 +4,15 @@ import React from 'react';
 import Image from '@/components/atoms/image';
 
 interface MenuProps {
-  type?: 'search' | 'button' | 'none';
+  type?: string;
   buttonLink?: string;
   text?: string;
+  inputChange?: (text: string) => void;
+  onClick?: () => void;
 }
 
-export default function Menu({ type = "none", buttonLink, text }: MenuProps) {
+export default function Menu({ type = "none", buttonLink, text, inputChange }: MenuProps) {
+
   return (
     <nav className="flex items-center justify-between flex-wrap bg-white border-b-10 border-blue-500 py-3 px-6">
       <div className="flex items-center flex-shrink-0 text-customGray mr-6">
@@ -22,7 +25,10 @@ export default function Menu({ type = "none", buttonLink, text }: MenuProps) {
               className="block w-full max-w-xs px-4 py-2 text-gray-900 placeholder-gray-500 border border-none bg-gray-100 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               type="search"
               name="search"
+              onChange={(e) => inputChange && inputChange(e.target.value)}
+
               placeholder={text || 'Buscar'}
+              style={{maxWidth: '240px'}}
             />
             <button type="submit" className="bg-gray-100 p-2">
               <Image
@@ -33,7 +39,7 @@ export default function Menu({ type = "none", buttonLink, text }: MenuProps) {
             </button>
           </div>
         ) : type === 'button' ? (
-          <button className="bg-gray-100 rounded px-8 py-1">
+          <button className="bg-gray-200 px-5 py-2 rounded-md text-sm font-medium text-gray-700  hover:text-white hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
             <a href={buttonLink || '#'}>{text || 'Botón'}</a>
           </button>
         ) : null}
