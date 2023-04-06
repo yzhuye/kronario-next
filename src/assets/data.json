@@ -22,18 +22,20 @@
       "rightUrl": "/subjects"
     },
     "badge_list":{
-      "badges": ["Pregrados", "Postgrados", "Cursos Extras"],
+      "badges": ["Pregrados", "Postgrados"],
       "color": "blue"
     },
+    "categories": [
+      { "name": "Pregrados", "id": "qwe-qw" },
+      { "name": "Postgrados", "id": "qwe-qe" }
+    ],
     "item_list": [
-      { "name": "Ingenieria en sistemas y computacion", "category": "Pregrado" },
-      { "name": "Ingenieria civil", "category": "Pregrado" },
-      { "name": "Diseño grafico", "category": "Pregrado" },
-      { "name": "Derecho", "category": "Pregrado" },
-      { "name": "Medicina", "category": "Pregrado" },
-      { "name": "Psicologia", "category": "Pregrado" },
-      { "name": "Felinorte", "category": "Curso Extra"},
-      { "name": "Danza Arabe", "category": "Curso Extra"}
+      { "name": "Ingenieria en sistemas y computacion", "category": "Pregrado", "id": "qwe-qwe" },
+      { "name": "Ingenieria civil", "category": "Pregrado", "id": "qwe-qw2" },
+      { "name": "Diseño grafico", "category": "Pregrado" , "id": "qwe-qw1" },
+      { "name": "Derecho", "category": "Pregrado", "id": "qwe-qw3" },
+      { "name": "Medicina", "category": "Pregrado", "id": "qwe-qw4" },
+      { "name": "Psicologia", "category": "Pregrado", "id": "qwe-qw5" }
     ]
   },    
   "pagina_asignaturas": {
@@ -51,15 +53,14 @@
       "rightUrl": "/restrictions"
     },
     "badge_list": {
-      "badges": ["Ingenieria en sistemas y computacion", "Ingenieria civil"],
       "color": "green"
     },
     "item_list": [
-      { "name": "Calculo 1", "category": "Ingenieria en sistemas y computacion / Ingenieria civil" },
-      { "name": "Calculo 2", "category":"Ingenieria en sistemas y computacion / Ingenieria civil" },
-      { "name": "Ciencia de los Materiales", "category": "Ingenieria civil" },
-      { "name": "Programacion orientada a objetos", "category":"Ingenieria en sistemas y computacion" },
-      { "name": "Algoritmia y programacion 2", "category":"Ingenieria en sistemas y computacion" }
+      { "name": "Calculo 1", "category": ["Ingenieria en sistemas y computacion","Ingenieria civil"], "id": "qwe-qww" },
+      { "name": "Calculo 2", "category":["Ingenieria en sistemas y computacion","Ingenieria civil"], "id": "qwe-qwr" },
+      { "name": "Ciencia de los Materiales", "category": ["Ingenieria civil"], "id": "qwe-qwt" },
+      { "name": "Programacion orientada a objetos", "category":["Ingenieria en sistemas y computacion"], "id": "qwe-qwy" },
+      { "name": "Algoritmia y programacion 2", "category":["Ingenieria en sistemas y computacion"], "id": "qwe-qwu" }
     ]
   },
   "pagina_restricciones": {
@@ -83,11 +84,11 @@
         "color": "yellow"
       },
       "profesor_list": [
-        { "name": "Juan Perez", "category": "Calculo 1" },
-        { "name": "Maria Lopez", "category":"Calculo 1" },
-        { "name": "Rocio Ramos Rodriguez", "category": "Algoritmia y programacion 2" },
-        { "name": "Jose Martinez", "category":"Programacion orientada a objetos" },
-        { "name": "Maria Rodriguez", "category":"Programacion orientada a objetos" }
+        { "name": "Juan Perez", "category": "Calculo 1", "id": "qwe-qwc" },
+        { "name": "Maria Lopez", "category":"Calculo 1", "id": "qwe-qwv" },
+        { "name": "Rocio Ramos Rodriguez", "category": "Algoritmia y programacion 2", "id": "qwe-qwb" },
+        { "name": "Jose Martinez", "category":"Programacion orientada a objetos", "id": "qwe-qwn" },
+        { "name": "Maria Rodriguez", "category":"Programacion orientada a objetos", "id": "qwe-qwm" }
       ]
     }
   },

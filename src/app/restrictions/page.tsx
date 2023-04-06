@@ -1,5 +1,4 @@
 "use client";
-
 import Menu from "@/components/molecules/menu";
 import ProgressBar from "@/components/atoms/progress_bar";
 import ArrowNav from "@/components/molecules/arrow_nav";
@@ -10,8 +9,15 @@ import BadgeList from "@/components/molecules/badge_list";
 
 import { pagina_restricciones as data} from '@/assets/data.json';
 
+import { useTeacherContext } from "@/context/teacherContext";
+
 const Page = () => {
   let { menu, arrow_nav, progress_bar, primera_seccion} = data;
+  let { teachers, filteredTeachers, categories, selectedTeachers, toggleTeacherSelection } = useTeacherContext();
+
+  const selectedTeacher = (teacher: any) => {
+    return selectedTeachers.includes(teacher);
+  }
 
   return (
     <>
@@ -21,8 +27,8 @@ const Page = () => {
       <div className="px-4 py-2 text-center">
         <Typography type="text" color="blue">{primera_seccion.title}</Typography>
       </div>
-      <BadgeList color={primera_seccion.subjects_badge.color} badges={primera_seccion.subjects_badge.badges} />
-      <ItemList type={2} items={primera_seccion.profesor_list} />
+      <BadgeList color={primera_seccion.subjects_badge.color} badges={categories} />
+      <ItemList type={2} items={filteredTeachers} selectedItems={selectedTeacher} onClick={toggleTeacherSelection} />
       <div className="px-4 py-2 text-center">
         <Typography type="text" color="blue">Preguntas de filtracion:</Typography>
       </div>
