@@ -30,7 +30,7 @@ const Question: React.FC<QuestionProps> = ({ question, answers }) => {
 
   return (
     <div className="bg-white rounded-lg p-4 flex flex-col cursor-pointer hover:bg-gray-200">
-        <div className="px-4 py-2">
+        <div className="px-4 pb-2 ">
             <Typography type="p" color="blue" >{question}</Typography>
         </div>
         <ul className={`grid ${className} gap-4 p-2 bg-white rounded-lg`}>	

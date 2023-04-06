@@ -77,7 +77,7 @@
       "rightUrl": "/schedules"
     },
     "primera_seccion": {
-      "title": "Bloquea tus Profesores",
+      "title": "Bloquea tus Profesores:",
       "subjects_badge": {
         "badges": ["Calculo 1", "Algoritmia y programacion 2", "Programacion orientada a objetos"],
         "color": "yellow"
