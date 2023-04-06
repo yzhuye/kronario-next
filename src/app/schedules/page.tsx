@@ -1,14 +1,28 @@
 "use client";
 
-import Menu from "@/components/molecules/menu";
-import ColoredProgressBar from "@/components/atoms/progress_bar";
-import ArrowNav from "@/components/molecules/arrow_nav";
+import React, { useState } from "react";
+import HeaderBar from "@/components/organisms/header_bar";
+import Table from "@/components/organisms/table";
+import data, { actualizarTabla, longitud } from "./data";
 
 const Home = () => {
+  const [contador, setContador] = useState(0);
+
+  const limiteContador = longitud - 1;
+
+  actualizarTabla(contador)
+  const handleClick = () => {
+    if (contador < limiteContador) {
+      setContador(contador + 1);
+    }
+  };
 
   return (
-    <><Menu type="button"  text="Guardar"  /><ColoredProgressBar progress={3} />
-    <ArrowNav direction="right" leftUrl="/restrictions" centerText="Elige tu horario" />
+    <>
+      <HeaderBar/>
+      <Table headers={data.headers} rows={data.rows} />
+      <button onClick={handleClick}>Contador: {contador}</button>
+      <div>Valor inicial del contador: {contador}</div>
     </>
   );
 };
